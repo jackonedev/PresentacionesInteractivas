@@ -1,0 +1,50 @@
+PRESENTACION DEL SOFTWARE
+
+3 PILARES: INGRESOS- DISTRIBUCION DE CAPITAL - EGRESOS
+
+CUENTAS:
+	- BANCARIAS: UNICA DIVISA
+	- EXTERNAS: MULTIPLES DIVISAS
+	- METALICO: CASH O ACTIVOS - MULTIPLES CATEGORIAS
+
+ESTADOS DE LAS CUENTAS:
+	- ESTADO INGRESO
+	- ESTADO AHORRO
+	- ESTADO EDUCACION
+	- ESTADO INVERSION
+	- ESTADO EGRESO
+
+TIPOS DE CUENTAS:
+	Se consideran posibilidades que se asemejen a la vida real, pero es posible restringir ciertos tipos de cuentas para educar a los usuarios.
+	Luego de los ":" se da un ejemplo
+
+TIPOS DE CUENTAS BANCARIAS:
+	- CUENTA BANCARIA DE INGRESO Y EGRESO: caso cuenta sueldo que luego de depositar en cuenta ahorro se sigue utilizando la misma cuenta para los gastos - válido tmb para cuentas ingresos no períodicos
+	- CUENTA BANCARIA DE AHORRO Y EGRESO: caso cuenta ahorro y se utiliza esa cuenta para afrontar un gasto sin antes haberse transferido el monto a otra cuenta - se puede restringir*
+	- CUENTA BANCARIA DE INGRESO: cuenta exclusiva para recibir ingresos para luego ser transferidos hacia otra cuenta
+	- CUENTA BANCARIA DE AHORRO: cuenta exclusiva para ahorro
+	- CUENTA BANCARIA DE INVERSION # es única y opcional: cuenta exclusiva para articular las cuentas de independencia N3 y cuentas de trading
+	- CUENTA BANCARIA DE EGRESO: cuentas exclusivas para realizar gastos
+
+
+TIPO DE CUENTAS EXTERNAS:
+	- CUENTA EXTERNA DE INGRESO Y EGRESO
+	- CUENTA EXTERNA DE AHORRO Y EGRESO
+	- CUENTA EXTERNA DE INGRESO
+	- CUENTA EXTERNA DE AHORRO
+	- CUENTA EXTERNA DE EGRESO
+
+TIPOS DE CUENTAS METALICO:
+	- CUENTA METALICO DE INGRESO, AHORRO Y EGRESO: el flujo normal, el ingreso de dinero o ún activo se considera ahorro hasta que se vende o se gasta
+	- CUENTA METALICO DE AHORRO Y EGRESOS: Una caja de ahorros que decides hacer una extraer cash
+	- CUENTA METALICO DE AHORRO: si agarras cash y lo depositas por ventanilla hacia una cuenta tuya
+
+TIPOS DE CUENTAS ADICIONALES:
+	- CUENTA N3: cuenta bancaria asociada a la CUENTA BANCARIA DE INVERSION # es única
+	- CUENTA DE TRADING: cuenta bancaria asociada a la CUENTA BANCARIA DE INVERSION
+	- CUENTA DE TRADING VARIADO: cuenta bancaria asociada a la CUENTA BANCARIA DE INVERSION
+	- CUENTA PRESUPUESTO: Cuenta bancaria, externa o metálico, de AHORRO, cuya finalidad es depositar anticipadamente mes a mes, las cuotas del presupuesto anual para financiación de deuda activa o imprevistos.
+
+#
+
+LA INTERFACE FRONTEND

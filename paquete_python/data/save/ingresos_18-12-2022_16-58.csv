@@ -1,0 +1,23 @@
+,Fecha,Descripcion,Monto,Tipo de ingreso,Comentarios,Cuenta,Tipo de cuenta,Tipo de moneda
+0,5/01/2022,SALARIO,140000,ACTIVO,Clases particulares online,INGRESOS,bancaria,ARS
+1,15/01/2022,Alquiler,30000,PASIVO,Alquiler del departamento en el centro,INGRESOS,bancaria,ARS
+2,5/02/2022,SALARIO,140000,ACTIVO,Clases particulares online,INGRESOS,bancaria,ARS
+3,15/02/2022,Alquiler,30000,PASIVO,Alquiler del departamento en el centro,INGRESOS,bancaria,ARS
+4,5/03/2022,SALARIO,140000,ACTIVO,Clases particulares online,INGRESOS,bancaria,ARS
+5,15/03/2022,Alquiler,30000,PASIVO,Alquiler del departamento en el centro,INGRESOS,bancaria,ARS
+6,20/03/2022,Venta moto,350000,ATIPICO,Venta de la moto Yamaha,Metálico[ARS],metálico,ARS
+7,5/04/2022,SALARIO,140000,ACTIVO,Clases particulares online,INGRESOS,bancaria,ARS
+8,15/04/2022,Alquiler,30000,PASIVO,Alquiler del departamento en el centro,INGRESOS,bancaria,ARS
+9,5/05/2022,SALARIO,172000,ACTIVO,Cobro BONO. Clases particulares online,INGRESOS,bancaria,ARS
+10,15/05/2022,Alquiler,30000,PASIVO,Alquiler del departamento en el centro,INGRESOS,bancaria,ARS
+11,5/06/2022,SALARIO,140000,ACTIVO,Clases particulares online,INGRESOS,bancaria,ARS
+12,15/06/2022,Alquiler,30000,PASIVO,Alquiler del departamento en el centro,INGRESOS,bancaria,ARS
+13,5/07/2022,SALARIO,140000,ACTIVO,Clases particulares online,INGRESOS,bancaria,ARS
+14,15/07/2022,Alquiler,30000,PASIVO,Alquiler del departamento en el centro,INGRESOS,bancaria,ARS
+15,5/08/2022,SALARIO,140000,ACTIVO,Clases particulares online,INGRESOS,bancaria,ARS
+16,15/08/2022,Alquiler,30000,PASIVO,Alquiler del departamento en el centro,INGRESOS,bancaria,ARS
+17,25/08/2022,Venta Cripto,200,PASIVO,Libero stalking del DEX,Binance,externa,USDT
+18,5/09/2022,SALARIO,140000,ACTIVO,Clases particulares online,INGRESOS,bancaria,ARS
+19,15/09/2022,Alquiler,30000,PASIVO,Alquiler del departamento en el centro,INGRESOS,bancaria,ARS
+20,5/10/2022,SALARIO,140000,ACTIVO,Clases particulares online,INGRESOS,bancaria,ARS
+
