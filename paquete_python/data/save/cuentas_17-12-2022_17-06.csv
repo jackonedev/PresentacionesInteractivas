@@ -1,8 +1,13 @@
-,Fecha,Banco/Entidad,Nombre cuenta,Tipo de cuenta,Tipo de moneda,es ahorro?,es presupuesto?,es inversion?,Datos de la cuenta,Comentarios
-1,1/01/2022,Galicia,CORRIENTE,bancaria,euros,no,no,no,CBU: 456853484535478538, 
-2,1/01/2022,Galicia,INGRESOS,bancaria,euros,no,no,no,CBU: 225400006885412585, 
-3,1/01/2022,Binance,Binance,externa,activos múltiples,no,no,no, ,Está creada con el mail jupyter@gmail.com
-4,1/01/2022,Binance,Binance P2P,externa,activos múltiples,no,no,no, , 
-5,1/01/2022,Ledger,Ledger,externa,activos múltiples,si,no,no, , 
-6,1/01/2022,Santander,AHORRO,bancaria,euros,si,si,no,CBU: 555485000011454525,Acá voy a depositar los ahorros y las cuotas para financiar el presupuesto
-7,1/01/2022,Santander,INVERSION,bancaria,euros,no,no,si,CBU: 665500004575135420,Empiezo a separar algo para mis futuras cuentas de trading
+,Fecha,Banco/Entidad,Nombre cuenta,Tipo de cuenta,Tipo de moneda,es INGRESO?,es AHORRO?,es EDUCACION?,es PRESUPUESTO?,es INVERSION?,es N3?,es TRADING?,es EGRESO?,Datos de la cuenta,Comentarios
+1,1/01/2022,Galicia,INGRESOS,bancaria,euros,si,no,no,no,no,no,no,no,CBU: 225400006885412585,Salario EMPRESA
+2,1/01/2022,Galicia,CORRIENTE,bancaria,euros,si,no,no,no,no,no,no,si,CBU: 457513542066005500,Gastos corrientes
+3,1/01/2022,Binance,Binance,externa,activos múltiples,si,no,no,no,no,no,no,no, ,Está creada con el mail jupyter@gmail.com
+4,1/01/2022,Binance,Binance P2P,externa,activos múltiples,no,si,no,no,no,no,no,no, ,Asociada a la cuenta Binance
+5,1/01/2022,Ledger,Ledger,externa,activos múltiples,no,si,no,no,no,no,no,no, ,Ahorro en activos digitales
+6,1/01/2022,Santander,AHORRO,bancaria,euros,no,si,si,no,no,no,no,si,CBU: 555485000011454525,Acá voy a depositar las cuotas para financiar el presupuesto
+7,1/01/2022,Santander,INVERSION,bancaria,euros,no,no,no,no,si,no,no,no,CBU: 2254685200301784528,Empiezo a separar algo para mis futuras inversiones
+8,1/01/2022, ,METALICO[ARS],metálico,pesos argentinos,si,si,no,no,no,no,no,si,guardados en el cajón,Venta de la moto $450.000 ARS
+9,1/01/2022, ,METALICO[USD],metálico,dólares USA,si,si,no,no,no,no,no,si,mamma perfect crew,Compro 800 USD cash por venta de moto
+10,1/01/2022,Brubank,Brubank,externa,ARS,si,no,no,no,no,no,no,si,CBU: 665500004575135420,cuenta digital en ARS para gastos empresariales
+11,1/01/2022,Brubank,Brubank,externa,USD,no,si,no,no,no,no,no,no,CBU: 665500004575135420,cuenta de ahorro en USD para guardar a largo plazo
+12,1/01/2022,Brubank,Brubank,externa,ARS,no,si,no,no,no,no,no,no,CBU: 665500004575135420,cuenta de plazos fijo en ARS
