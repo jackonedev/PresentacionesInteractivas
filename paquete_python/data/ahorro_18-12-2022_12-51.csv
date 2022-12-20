@@ -1,0 +1,14 @@
+,Fecha,Monto,Proviene de cuenta,Cuenta ahorro,Tipo de cuenta,Tipo de moneda
+1,5/01/2022,60,Binance,Ledger,externa,USDT
+2,6/02/2022,18500,CORRIENTE,AHORRO,bancaria,ARS
+3,5/03/2022,0.004,Binance,Ledger,externa,BTC
+4,5/04/2022,30,Binance,Ledger,externa,USDT
+5,5/04/2022,10000,CORRIENTE,AHORRO,bancaria,ARS
+6,5/05/2022,20000,INGRESOS,AHORRO,bancaria,ARS
+7,5/06/2022,20850,INGRESOS,AHORRO,bancaria,ARS
+8,5/07/2022,21300,CORRIENTE,AHORRO,bancaria,ARS
+9,5/08/2022,0.002,Binance,Ledger,externa,BTC
+10,5/08/2022,30,Binance,Ledger,externa,USDT
+11,5/09/2022,15000,Binance P2P,AHORRO,bancaria,ARS
+12,5/10/2022,25,Binance,Ledger,externa,USDT
+13,6/10/2022,800,METALICO[ARS],METALICO[USD],metálico,USD
