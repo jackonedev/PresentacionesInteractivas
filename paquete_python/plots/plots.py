@@ -3,16 +3,17 @@
 import pandas as pd
 from matplotlib.pyplot import plot
 import plotly.express as px
-# import chart_studio.plotly as py
-# import chart_studio.tools as tls
+import chart_studio.plotly as py
+import chart_studio.tools as tls
 from time import sleep
 from dotenv import load_dotenv
 import os
 from abc import ABC
 from itertools import count
 
-from plots.tools import descargar_imagen #TODO: esto es un error porque dependiendo del directorio en que importas es como se debe llamar
+# from plots.tools import descargar_imagen #TODO: SACAR ESTO esto es un error porque dependiendo del directorio en que importas es como se debe llamar
 
+load_dotenv()
 
 class VisualizerData:
     """VisualizerData:
@@ -182,111 +183,113 @@ class BackendPlotter:
         return self.processor, 'kind', kind, resample
 
 
-# class PlotterStorage(ABC):
-#     def __init__(self):
-#         self.figures = {}
-#         self.count = count()
+class PlotterStorage(ABC):
+    def __init__(self):
+        self.figures = {}
+        self.count = count()
         
-#     def add_graph(self, processor, type_graph, kind=None, resample=None, select_figures=False, download_html=False):
-#         def visual_data_wt():
-#             return dict(height=processor.height, width=processor.width, labels=processor.y_axis_label, template=processor.template)
-#         def visual_data_kind_wt(kind):
-#             return dict(kind=kind, height=processor.height, width=processor.width, labels=processor.y_axis_label, template=processor.template)
+    def add_plot(self, processor, type_graph, kind=None, resample=None, select_figures=False):#, download_html=False):# Esta funcion es horrible #TODO
+        def visual_data_wt():
+            return dict(height=processor.height, width=processor.width, labels=processor.y_axis_label, template=processor.template)
+        def visual_data_kind_wt(kind):
+            return dict(kind=kind, height=processor.height, width=processor.width, labels=processor.y_axis_label, template=processor.template)
 
-#         num = next(self.count)
-#         if select_figures:
-#             if title := input("Ingrese título para guardar\nEnter para saltear"):
+        num = next(self.count)
+        if select_figures:
+            """El title es para actualizar el título dentro del gráfico"""
+            if title := input("Ingrese título para guardar\nEnter para saltear"):
                 
-#                 if type_graph == "plot":
-#                     self.figure = processor.current_content.plot(
-#                         title = title,
-#                         **visual_data_wt()
-#                     )
+                if type_graph == "plot":
+                    self.figure = processor.current_content.plot(
+                        title = title,
+                        **visual_data_wt()
+                    )
 
-#                 elif type_graph == "plot_areas":
-#                     self.figure = processor.current_content.plot.area(
-#                         title = title,
-#                         **visual_data_wt()
-#                     )
+                elif type_graph == "plot_areas":
+                    self.figure = processor.current_content.plot.area(
+                        title = title,
+                        **visual_data_wt()
+                    )
 
-#                 elif type_graph == 'kind':
-#                     if resample:
-#                         with_resample = lambda obj, param: obj.current_content.resample(param).sum()
-#                         self.figure = with_resample(processor, resample).plot(
-#                             title=title,
-#                             **visual_data_kind_wt(kind)
-#                         )
-#                     else:
-#                         self.figure = processor.current_content.plot(
-#                             title=title,
-#                             **visual_data_kind_wt(kind)
-#                         )
-#                 self.figures[processor.current_feature+'_'+str(num)] = self.figure
+                elif type_graph == 'kind':
+                    if resample:
+                        with_resample = lambda obj, param: obj.current_content.resample(param).sum()
+                        self.figure = with_resample(processor, resample).plot(
+                            title=title,
+                            **visual_data_kind_wt(kind)
+                        )
+                    else:
+                        self.figure = processor.current_content.plot(
+                            title=title,
+                            **visual_data_kind_wt(kind)
+                        )
+                self.figures[processor.current_feature+'_'+str(num)] = self.figure
             
-#             if download_html:
-#                 if name := input("Ingrese nombre para guardar\nEnter para salir"):
-#                     descargar_imagen(obj=self.figure, suffix=name)
+    #         if download_html:
+    #             if name := input("Ingrese nombre para guardar\nEnter para salir"):
+    #                 descargar_imagen(obj=self.figure, suffix=name)
 
-#     def download_html(self):
-#         for name, figure in self.figures.items():
-#             descargar_imagen(obj=figure, suffix=name)
+    # def download_html(self):
+    #     for name, figure in self.figures.items():
+    #         descargar_imagen(obj=figure, suffix=name)
 
-# class GraphUploader:
+class GraphUploader:
 
-    # load_dotenv()
-    # USER = os.environ["USER_CS"]
-    # TOKEN = os.environ["TOKEN_CS"]
-    # tls.set_credentials_file(username=USER, api_key=TOKEN)
-    # pd.options.plotting.backend = "plotly"
+    load_dotenv()
+    USER = os.environ["USER_CS_J"]
+    TOKEN = os.environ["TOKEN_CS_J"]
+    tls.set_credentials_file(username=USER, api_key=TOKEN)#TODO
+    pd.options.plotting.backend = "plotly"
 
-    # def __init__(self, storage):
-    #     self.storage: PlotterStorage = storage
-    #     self.figure = None
+    def __init__(self, storage):
+        self.storage: PlotterStorage = storage
+        self.figure = None
 
-    # def show_figures(self):
-    #     print(f"Figures: {self.storage.figures.keys()}")
+    def show_figures(self):
+        print(f"Figures: {self.storage.figures.keys()}")
 
-    # def set_figure(self, figure=None, select=False):
-    #     if figure is not None and list(self.storage.figures.keys()).count(figure) > 0:
-    #         self.figure = True
-    #         self.storage.figure = self.storage.figures[figure]
-    #         return self
+    def set_figure(self, figure=None, select=False):
+        if figure is not None and list(self.storage.figures.keys()).count(figure) > 0:
+            self.figure = True
+            self.storage.figure = self.storage.figures[figure]
+            return self
 
-    #     elif select:
-    #         print(f"Select Figure: {self.storage.figures.keys()}")
-    #         while True:
-    #             if name := input("Select figure = "):
-    #                 if list(self.storage.figures.keys()).count(name) > 0:
-    #                     self.figure = True
-    #                     self.storage.figure = self.storage.figures[name]
-    #                     return self
-    #                 else:
-    #                     print(
-    #                         "label not found: check type writting or press enter to exit"
-    #                     )
-    #                     continue
-    #             else:
-    #                 print("Figure set up failed")
-    #             break
-    #     else:
-    #         self.figure = None
-    #         return self
+        elif select:
+            print(f"Select Figure: {self.storage.figures.keys()}")
+            while True:
+                if name := input("Select figure = "):
+                    if list(self.storage.figures.keys()).count(name) > 0:
+                        self.figure = True
+                        self.storage.figure = self.storage.figures[name]
+                        return self
+                    else:
+                        print(
+                            "label not found: check type writting or press enter to exit"
+                        )
+                        continue
+                else:
+                    print("Figure set up failed")
+                break
+        else:
+            self.figure = None
+            return self
 
-    # def show(self):
-    #     if self.figure is None:
-    #         return False
-    #     self.storage.figure.show()
+    def show(self):
+        if self.figure is None:
+            return False
+        self.storage.figure.show()
 
-    # def show_all(self):
-    #     for figure in self.storage.figures.values():
-    #         figure.show()
+    def show_all(self):
+        for figure in self.storage.figures.values():
+            figure.show()
 
-    # def upload(self, filename, auto_open=True):
-    #     if self.figure:
-    #         py.plot(self.storage.figure, filename=filename, auto_open=auto_open)
-    #     else:
-    #         print ("It's necesary to apply method set_figure() first")
+    def upload(self, filename, auto_open=True):
+        if self.figure:
+            py.plot(self.storage.figure, filename=filename, auto_open=auto_open)
+        else:
+            print ("It's necesary to apply method set_figure() first")
 
-    # def upload_all(self, auto_open=False):
-    #     for key, figure in self.storage.figures.items():
-    #         py.plot(figure, filename=input('select filename: '), auto_open=auto_open)
+    def upload_all(self, auto_open=False):
+        """ el filename=input() define el nombre del gráfico en el dashboard de plotly chart studio"""
+        for key, figure in self.storage.figures.items():
+            py.plot(figure, filename=input('select filename: '), auto_open=auto_open)
